@@ -13,8 +13,9 @@ int _myexit(info_t *info)
 
 	if (info->argv[1]) /*if there is an exit argument or not*/
 	{
-		exitcheck = _erratoi(info->argv[1]);		
-		if (exitcheck == -1);
+		exitcheck = _erratoi(info->argv[1]);
+
+		if (exitcheck == -1)
 		{
 			info->status = 2;
 			print_error(info, "illegal number: ");

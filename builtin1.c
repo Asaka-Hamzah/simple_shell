@@ -1,22 +1,23 @@
 #include "shell.h"
+
 /**
-*_myhistory - displays the history list, one command by line,preceded 
-* with line numbers, starting at 0.
-*  @info:Structure containing potential arguments. 
-*	constant function prototype.
-*Return: Always 0
+* _myhistory - displays the history list, one command by line,
+* preceded with line numbers, starting at 0.
+* @info:Structure containing potential arguments.
+* constant function prototype.
+* Return: Always 0
 */
 int _myhistory(info_t *info)
-{ 
+{
 	print_list(info->history);
 	return (0);
 }
 /**
-*	unset_alias - sets alias to string
-*	@info: parameter struct
-*	@str: the string alias
+* unset_alias - sets alias to string
+* @info: parameter struct
+* @str: the string alias
 *
-*	Return: Always 0 on success, 1 on error
+* Return: Always 0 on success, 1 on error
 */
 int unset_alias(info_t *info, char *str)
 {
@@ -28,7 +29,7 @@ int unset_alias(info_t *info, char *str)
 		return (1);
 	c = *p;
 	*p = 0;
-	ret = delete_node_at_index(&(info->alias), 
+	ret = delete_node_at_index(&(info->alias),
 			get_node_index(info->alias, node_starts_with(info->alias, str, -1)));
 	*p = c;
 	return (ret);
@@ -73,15 +74,15 @@ int print_alias(list_t *node)
 	return (1);
 }
 /**
- *_myalias - mimics the alias builtin 
- *@info:Structure containing potential arguments. 
+ * _myalias - mimics the alias builtin
+ * @info:Structure containing potential arguments.
  * constant function prototype.
- *  Return: Always 0
+ * Return: Always 0
  */
 int _myalias(info_t *info)
 {
 	int i = 0;
-	char *p = NULL ;
+	char *p = NULL;
 	list_t *node = NULL;
 
 	if (info->argc == 1)
