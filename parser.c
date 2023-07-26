@@ -5,6 +5,7 @@
  * @path: path the file in question
  * @info: the information structure
  *
+ * Return: o
  */
 int is_cmd(info_t *info, char *path)
 {

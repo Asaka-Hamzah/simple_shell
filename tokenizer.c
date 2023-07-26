@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * @d: the delimeter string
+ * strtow - splits a string into words
+ * @d: The delimeter string
  * Return: a pointer to an array of characters
-* strtow - splits a string into words
  * @str: the input string
 */
 char **strtow(char *str, char *d)

@@ -54,6 +54,8 @@ typedef struct liststr
 } list_t;
 
 /**
+ * struct passinfo - A struct that contains pseudo-arguements
+ * to pass into a function
  * @alias: the alias node
  * @env_changed: on if environment
  * @status: the return status of the last exec'd command
@@ -68,7 +70,6 @@ typedef struct liststr
  * @env: linked list local copy of environ
  * @environ: custom modified copy of environ from LL env
  * @history: the history node
- * struct passinfo - contains pseudo-arguements to pass into a function,
  * allowing uniform prototype for function pointer struct
  * @arg: a string generated from getline containing arguements
  * @argv:an array of strings generated from arg
@@ -95,7 +96,7 @@ typedef struct passinfo
 
 	int readfd;
 	int histcount;
-	char **cmd_buf; 
+	char **cmd_buf;
 	int cmd_buf_type;
 } info_t;
 
