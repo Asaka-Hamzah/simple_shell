@@ -1,4 +1,5 @@
-"include "shell.h"
+#include "shell.h"
+
 /**
  * _eputs - prints the entered string
  * @str: the printing string
