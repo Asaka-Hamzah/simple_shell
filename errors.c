@@ -65,11 +65,11 @@ int _putfd(char c, int fd)
 }
 
 /**
- * _putsfd - printsthe entered string
+ * _putsfd - A function that prints the entered string
  * @fd: the filedescription to be written
  * @str: the string needed to be printed
  *
- * return; the number of charcters entered
+ * Return: the number of charcters entered
  */
 int _putsfd(char *str, int fd)
 {

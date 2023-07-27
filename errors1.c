@@ -1,6 +1,6 @@
 #include "shell.h"
 /**
- * _erratoi - converts a string 
+ * _erratoi - A function that converts a string
  * @s: the string to be converted
  * Return: 0 if no numbers in string, converted number otherwise
  *       -1 on error
@@ -11,7 +11,7 @@ int _erratoi(char *s)
 	unsigned long int result = 0;
 
 	if (*s == '+')
-		s++;  
+		s++;
 	for (i = 0;  s[i] != '\0'; i++)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
@@ -28,12 +28,13 @@ int _erratoi(char *s)
 }
 
 /**
- *  @estr: string containing the kind error
-* print_error - prints the error message
-* @info: the parameter & return info structure
-*  * Return: 0 if no numbers in string, converted number otherwise
+ * print_error - prints the error message
+ * @estr: string containing the kind error
+ * @info: the parameter & return info structure
+ * Return: 0 if no numbers in string, converted number otherwise
  *        -1 on error
  */
+
 void print_error(info_t *info, char *estr)
 {
 	_eputs(info->fname);
@@ -99,7 +100,7 @@ char *convert_number(long int num, int base, int flags)
 	static char buffer[50];
 	char *ptr;
 	char sign = 0;
-	unsigned long n = num ;
+	unsigned long n = num;
 
 	if (!(flags & CONVERT_UNSIGNED) && num < 0)
 	{
@@ -107,15 +108,15 @@ char *convert_number(long int num, int base, int flags)
 		sign = '-';
 
 	}
-	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" : 
-		"0123456789ABCDEF"; 
+	array = flags & CONVERT_LOWERCASE ? "0123456789abcdef" :
+		"0123456789ABCDEF";
 	ptr = &buffer[49];
 	*ptr = '\0';
 
 	do {
 		*--ptr = array[n % base];
 		n /= base;
-	}while (n != 0);
+	} while (n != 0);
 
 	if (sign)
 		*--ptr = sign;
@@ -123,9 +124,8 @@ char *convert_number(long int num, int base, int flags)
 }
 
 /**
- *
+ * remove_comments - A function to replace first instance of '#' by '\0'
  * @buf: address of the string to modify
- *remove_comments - function to replace first instance of '#' by '\0'
  *
  * Return: Always 0;
  */
