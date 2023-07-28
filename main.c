@@ -1,21 +1,23 @@
 #include "shell.h"
 
 /**
- * main - A program to the enter point
- * @av: arg vector
- * @ac: arg count
+ * main - A function for entry point
+ * @av: The arguement vector
+ * @ac: The argruement count
  *
- * Return: 0 when success 1 otherwise
- */
+ * Return: (0) Success, (1) Error
+*/
+
 int main(int ac, char **av)
 {
-	info_t info[] = {INFO_INIT};
+	info_t info[] = { INFO_INIT };
 	int fd = 2;
 
 	asm ("mov %1, %0\n\t"
 			"add $3, %0"
 			: "=r" (fd)
 			: "r" (fd));
+
 	if (ac == 2)
 	{
 		fd = open(av[1], O_RDONLY);
@@ -32,10 +34,13 @@ int main(int ac, char **av)
 				_eputchar(BUF_FLUSH);
 				exit(127);
 			}
+
 			return (EXIT_FAILURE);
 		}
+
 		info->readfd = fd;
 	}
+
 	populate_env_list(info);
 	read_history(info);
 	hsh(info, av);
