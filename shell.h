@@ -63,7 +63,6 @@ typedef struct liststr
  * @cmd_buf_type: CMD_type ||, &&, ;
  * @readfd: the fd from which to read line input
  * @histcount: the history line number count
- * @line_count: the error count
  * @err_num: the error code for exit()s
  * @linecount_flag: if on count this line of input
  * @fname: the program filename
@@ -101,8 +100,8 @@ typedef struct passinfo
 } info_t;
 
 #define INFO_INIT \
-{NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, NULL,\
-	0, 0, 0}
+{0, 0, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, 0, 0, \
+0, 0, NULL, 0}
 
 /**
  * struct builtin - contains a builtin of characters
