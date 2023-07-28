@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _strcmp - A function that performs lexicographic comparison
+ * _strcmp - A function that performs lexicographical comparison
  * between two strings.
  * @s1: First String
  * @s2: Second String

@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * write_history - A function that clears a file, or appends
+ * write_history - A function that clears a file, or appends it
  * to an existing file
  * @info: The parameter struct
  *
@@ -36,7 +36,7 @@ int write_history(info_t *info)
 
 /**
  * get_history_file - A function that gets the histroy file
- * @info: The parameter struct
+ * @info: The parameter structure
  *
  * Return: The allocated string containing history file
 */

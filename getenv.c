@@ -22,7 +22,7 @@ char **get_environ(info_t *info)
 
 /**
  * _setenv - A function that initializes a new environment variable,
- * or modify an existing one
+ * or do a modification to an existing one
  * @var: The string environ variable property
  * @info: The structure containing potentials arguments
  * @value: The string environ variable value
@@ -71,7 +71,7 @@ int _setenv(info_t *info, char *var, char *value)
  * @var: The string environ variable property
  * @info: Structure containing potential arguments
  *
- * Return: (1) delete, 0
+ * Return: (1) delete, 0 otherwise
 */
 
 int _unsetenv(info_t *info, char *var)
