@@ -2,9 +2,9 @@
 
 /**
  * get_input - A function that gets a line minus the newline
- * @info: The parameter struct
+ * @info: The parameter structure needed
  *
- * Return: The bytes read
+ * Return: The bytes read is returned
 */
 
 ssize_t get_input(info_t *info)
@@ -49,7 +49,7 @@ ssize_t get_input(info_t *info)
 /**
  * input_buf - A function that buffers chained commands
  * @len: The address of len variable
- * @info: The parameter struct
+ * @info: The parameter structure
  * @buf: The address of buffer
  *
  * Return: The bytes read.
@@ -154,7 +154,7 @@ void sigintHandler(__attribute__((unused))int sig_num)
  * read_buf - A function that reads a buffer
  * @buf: The buffer
  * @i: Size
- * @info: The parameter struct
+ * @info: The parameter structure
  *
  * Return: (r)
 */

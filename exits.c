@@ -3,8 +3,8 @@
 /**
  * *_strncat - A function that concatenates two strings
  * @n: The amount of bytes to be used maximally
- * @src: The second string
- * @dest: The first string
+ * @src: The second string to be concatenated
+ * @dest: The first string to be concatenated
  *
  * Return: The concatenated string
 */
@@ -34,8 +34,8 @@ char *_strncat(char *dest, char *src, int n)
 /**
  * _strncpy - A function that copies a string
  * @n: The amount of bytes to be used maximally
- * @src: The second string
- * @dest: The first string
+ * @src: The second string to be concatenated
+ * @dest: The first string to be concatenated
  *
  * Return: The concatenated string
 */
